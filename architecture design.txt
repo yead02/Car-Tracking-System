@@ -1,0 +1,43 @@
+For this project, I will prefer Microservice Architecture. 
+
+Through Microservice Architecture, I will be able to manage each of the entity seperately. And if there are maintanance work being done in one entity, other entities will remain unchanged and would work properly.
+
+There are 6 different entities.
+1. Manager
+2. Operator
+3. Car
+4. City
+5. Report
+6. Tracking
+
+Manager:
+    1. ManagerId
+    2. ManagerName
+    3. ManagerPassword
+
+Operator:
+    1. OperatorId
+    2. OperatorName
+    3. OperatorCode
+
+Car:
+    1. CarId
+    2. CarName
+    3. OperatorId  #I will asume that each car will be assosiated with one operator only. So, I will get both car and operator information through only CarId
+
+City:
+    1. CityId
+    2. CityName
+    3. CarID
+    4. File
+
+Report:
+    1. ReportId
+    2. CarID
+    3. DateTime
+    4. ReportDetails
+
+Tracking:
+    1. TrackingId
+    2. CarID
+    3. CurrentLocation

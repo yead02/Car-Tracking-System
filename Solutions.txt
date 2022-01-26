@@ -1,0 +1,7 @@
+1. We can do pagination. Through pagination, we will only need to bring a smaller portion of the data. We can set that each page will show 10 or 20 lines of data. This 20 lines of data won't need much time to load. Server side pagination can handle upto millions of data and it brings results within miliseconds.
+
+get_paginated_response(self,data), paginate_queryset(self,queryset)
+
+2. We need to handle this part in the frontend. We can set a condition at the frontend that if the data in not comming then try to reconnect in every 5 seconds. In JavaScript, SetTimeout or SetInterval functions can be called. These functions will be called when there are irregular hit from the API. In this case, reload cannot be called as if the connection remains bad even after 5 seconds, the frontend will be get refreshed and the function cannot work properly.
+
+3. We need to check the current position of the car and operator and then we need to match the position with the database. We can first retrieve the position specified in the database. Then if there is any change in the position only then we will update the database and the variable as well. In this case, the database will be hit only when the car or the operator moves.
